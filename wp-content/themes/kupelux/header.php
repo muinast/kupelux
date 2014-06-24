@@ -34,96 +34,7 @@
     <h1><span>K</span>upe<span>L</span>ux</h1>
 </a>
 
-<section id="languages_block_top" class="header-box header-button">
-    <div id="countries_2">
-        <p class="selected_language icon_wrapp">
-            <b>Language</b>
-            <strong><span class="first_language"></span>Russian</strong>
-            <em> ru</em>
-            <i class="arrow_header_top icon-angle-down"></i>
-        </p>
-        <ul id="first-languages" class="countries_ul list_header">
-            <li>
-                <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_lang=1"
-                   title="English (English)">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/1.jpg" alt="en" width="26" height="16"><span><span class="firstWord"> (English)</span>English</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_lang=2"
-                   title="Deutsch (German)">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/2.jpg" alt="de" width="26" height="16"><span><span class="firstWord"> (German)</span>Deutsch</span>
-                </a>
-            </li>
-            <li class="selected">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/3.jpg" alt="ru" width="26" height="16"><span><span class="firstWord"></span>Russian</span>
-            </li>
-            <li>
-                <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_lang=4"
-                   title="Español (Spanish)">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/4.jpg" alt="es" width="26" height="16"><span><span class="firstWord"> (Spanish)</span>Español</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_lang=5"
-                   title="Français (French)">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/5.jpg" alt="fr" width="26" height="16"><span><span class="firstWord"> (French)</span>Français</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
-<!--<script type="text/javascript">
-    $(document).ready(function () {
-        $('#countries_2 .countries_ul li span').each(function () {
-            var h = $(this).html();
-            var index = h.indexOf(' ');
-            if (index == -1) {
-                index = h.length;
-            }
-            $(this).html('<span class="firstWord">' + h.substring(index, h.length) + '</span>' + h.substring(0, index));
-        });
-    });
-
-
-    $(document).ready(function () {
-        $('#languages_block_top .selected_language strong').each(function () {
-            var h = $(this).html();
-            var index = h.indexOf(' ');
-            if (index == -1) {
-                index = h.length;
-            }
-            $(this).html('<span class="first_language">' + h.substring(index, h.length) + '</span>' + h.substring(0, index));
-        });
-    });
-
-</script>-->
-
-<section id="currencies_block_top" class="header-box header-button">
-    <form id="setCurrency" action="./Flooring_files/Flooring.htm" method="post">
-        <p class="inner-carrencies icon_wrapp">
-            <input type="hidden" name="id_currency" id="id_currency" value="">
-            <input type="hidden" name="SubmitCurrency" value="">
-            <b>Валюта</b>
-            <strong>
-                USD
-            </strong>
-            <em>$ </em>
-            <i class="arrow_header_top icon-angle-down"></i>
-        </p>
-        <ul id="first-currencies" class="currencies_ul list_header">
-            <li class="selected">
-                <span>$</span>Dollar
-            </li>
-            <li>
-                <a href="javascript:setCurrency(2);" title="Euro" rel="nofollow"><span>€</span>Euro</a>
-            </li>
-        </ul>
-    </form>
-</section>
-
-
-<section id="search_block_top" class="header-box">
+<!--<section id="search_block_top" class="header-box">
     <form method="get" action="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=search"
           id="searchbox">
         <p>
@@ -137,117 +48,11 @@
                     class="icon-search"></i><span>Поиск</span></a>
         </p>
     </form>
-</section>
-<!--<script type="text/javascript">
-    // <![CDATA[
-    function tryToCloseInstantSearch() {
-        if ($('#old_center_column').length > 0) {
-            $('#center_column').remove();
-            $('#old_center_column').attr('id', 'center_column');
-            $('body').removeClass('instant_search');
-            $('#slider .nivo-main-image').trigger('mouseout');
-            $('#center_column').show();
-            return false;
-        }
-    }
+</section>-->
 
-    instantSearchQueries = new Array();
-    function stopInstantSearchQueries() {
-        for (i = 0; i < instantSearchQueries.length; i++) {
-            instantSearchQueries[i].abort();
-        }
-        instantSearchQueries = new Array();
-    }
-
-    $("#search_query_top").keyup(function () {
-        if ($(this).val().length > 0) {
-            stopInstantSearchQueries();
-            instantSearchQuery = $.ajax({
-                url: 'http://livedemo00.template-help.com/prestashop_48520/index.php?controller=search',
-                data: {
-                    instantSearch: 1,
-                    id_lang: 3,
-                    q: $(this).val()
-                },
-                dataType: 'html',
-                type: 'POST',
-                success: function (data) {
-                    if ($("#search_query_top").val().length > 0) {
-                        tryToCloseInstantSearch();
-                        $('#center_column').attr('id', 'old_center_column');
-                        $('#old_center_column').after('<div id="center_column" class="instant ' + $('#old_center_column').attr('class') + '">' + data + '</div>');
-                        $('#center_column').find('ul#product_list').removeClass('grid').addClass('list');
-                        $('body').addClass('instant_search');
-                        $('#old_center_column').hide();
-                        // Button override
-                        ajaxCart.overrideButtonsInThePage();
-                        $('#slider .nivo-main-image').trigger('mouseenter');
-                        $("#instant_search_results a.close-search").click(function () {
-                            $("#search_query_top").val('');
-                            $('body').removeClass('instant_search');
-                            $('#slider .nivo-main-image').trigger('mouseout');
-                            return tryToCloseInstantSearch();
-                        });
-                        return false;
-                    }
-                    else
-                        tryToCloseInstantSearch();
-                }
-            });
-            instantSearchQueries.push(instantSearchQuery);
-        }
-        else
-            tryToCloseInstantSearch();
-    });
-    // ]]>
-</script>
-<script type="text/javascript">
-    // <![CDATA[
-    $('document').ready(function () {
-        $("#search_query_top")
-            .autocomplete(
-            'http://livedemo00.template-help.com/prestashop_48520/index.php?controller=search', {
-                minChars: 3,
-                max: 10,
-                width: 300,
-                selectFirst: false,
-                scroll: false,
-                dataType: "json",
-                formatItem: function (data, i, max, value, term) {
-                    return value;
-                },
-                parse: function (data) {
-                    var mytab = new Array();
-                    for (var i = 0; i < data.length; i++)
-                        mytab[mytab.length] = { data: data[i], value: data[i].cname + ' > ' + data[i].pname };
-                    return mytab;
-                },
-                extraParams: {
-                    ajaxSearch: 1,
-                    id_lang: 3
-                }
-            }
-        )
-            .result(function (event, data, formatted) {
-                $('#search_query_top').val(data.pname);
-                document.location.href = data.product_link;
-            })
-    });
-    // ]]>
-</script>
--->
-
-<section class="blockuserinfo header-box">
-    <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=my-account"
-       class="login"><span><i class="icon-lock"></i><b>Вход</b></span></a>
-</section>
-<section id="your_account"><a
-        href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=my-account"
-        title="Просмотреть мою учетную запись покупателя" rel="nofollow">Ваша учетная запись</a></section>
 <section id="header_user" class="blockuserinfo-cart header-box">
     <div id="shopping_cart">
-        <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=order"
-           title="Просмотреть мою корзину" rel="nofollow">
+        <a href="#">
             <i class="opancart icon-caret-down"></i>
             <span class="shopping_cart_title"></span>
             <span class="ajax_cart_quantity" style="display: none;">0</span>
@@ -256,11 +61,38 @@
         </a>
     </div>
 </section>
+
 <div id="menu-wrap" class="clearfix desktop">
     <div id="menu-trigger" style="display: none;">Categories<i class="menu-icon icon-plus-sign-alt"></i></div>
     <ul id="menu-custom">
+        <li>
+            <a href="#">ГЛАВНАЯ</a>
+        </li>
+        <li>
+            <a href="#">ШКАФЫ-КУПЕ</a>
+        </li>
+        <li class="hasSub">
+            <a href="#">ФОТО-КАТАЛОГ</a>
+            <ul>
+                <li>
+                    <a href="#">ШКАФЫ-КУПЕ</a>
+                </li>
+                <li>
+                    <a href="#">ПРИХОЖИЕ</a>
+                </li>
+                <li>
+                    <a href="#">КУХНИ</a>
+                </li>
+                <li>
+                    <a href="#">ГОРКИ</a>
+                </li>
+                <li>
+                    <a href="#">ОФИСНАЯ МЕБЕЛЬ</a>
+                </li>
+            </ul>
+        </li>
         <li class="hasSub"><a
-                href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=3&controller=category&id_lang=3">Carpet</a>
+                href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=3&controller=category&id_lang=3">МАТЕРИАЛЫ</a>
             <ul>
                 <li>
                     <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=6&controller=category&id_lang=3">Lorem
@@ -295,39 +127,19 @@
             </ul>
         </li>
         <li>
-            <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=4&controller=category&id_lang=3">Hardwood</a>
+            <a href="#">ИНФОРМАЦИЯ</a>
         </li>
         <li>
-            <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=5&controller=category&id_lang=3">Ceramic</a>
+            <a href="#">НОВОСТИ</a>
         </li>
         <li>
-            <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=10&controller=category&id_lang=3">Stone</a>
-        </li>
-        <li>
-            <a href="http://livedemo00.template-help.com/prestashop_48520/index.php?id_category=17&controller=category&id_lang=3">Laminate</a>
+            <a href="#">КОНТАКТЫ</a>
         </li>
     </ul>
 </div>
-<!--<script type="text/javascript">
-    $(document).ready(function () {
-        $('#menu-custom li:has(ul)').addClass('hasSub');
-    });
-</script>-->
-<!--<script type="text/javascript">
-    var CUSTOMIZE_TEXTFIELD = 1;
-    var img_dir = 'http://livedemo00.template-help.com/prestashop_48520/themes/theme915/img/';
 
-    var customizationIdMessage = 'Модификация №';
-    var removingLinkText = 'удалить товар из корзины';
-    var freeShippingTranslation = 'Бесплатная доставка!';
-    var addedSuccessfully = 'Your product has been successfully added to your cart!';
-    var freeProductTranslation = 'Бесплатно!';
-    var delete_txt = 'Удалить';
-    var ajaxcart_allowed = 1;
-    var generated_date = 1403605991;
-</script>-->
 
-<section id="cart_block" class="block column_box exclusive">
+<!--<section id="cart_block" class="block column_box exclusive">
     <h4><span>Корзина</span><i class="column_icon_toggle icon-plus-sign"></i></h4>
 
     <div class="block_content toggle_content">
@@ -365,7 +177,7 @@
             </p>
         </div>
     </div>
-</section>
+</section>-->
 
 <div id="slider1_container"  style="position: relative; top: 0px; left: 0px; width: 1170px; height: 390px;">
     <div id="slider" u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1170px; height: 390px;">
@@ -460,30 +272,6 @@
         </li>
     </ul>
 </div>
-
-<section class="header-box blockpermanentlinks-header">
-    <ul id="header_links" class="hidden-xs">
-        <li id="header_link_contact"><a class="header_links_contact"
-                                        href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=contact"
-                                        title="Контакты">Контакты</a></li>
-        <li id="header_link_sitemap"><a class="header_links_sitemap"
-                                        href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=sitemap"
-                                        title="Карта сайта">Карта сайта</a></li>
-    </ul>
-    <div class="mobile-link-top header-button visible-xs">
-        <h4 class="icon_wrapp">
-            <span class="title-hed"></span><i class="arrow_header_top_menu arrow_header_top icon-reorder"></i>
-        </h4>
-        <ul id="mobilelink" class="list_header">
-            <li id="header_link_contact"><a class="header_links_contact"
-                                            href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=contact"
-                                            title="Контакты">Контакты</a></li>
-            <li id="header_link_sitemap"><a class="header_links_sitemap"
-                                            href="http://livedemo00.template-help.com/prestashop_48520/index.php?controller=sitemap"
-                                            title="Карта сайта">Карта сайта</a></li>
-        </ul>
-    </div>
-</section>
 
 </div>
 </header>
