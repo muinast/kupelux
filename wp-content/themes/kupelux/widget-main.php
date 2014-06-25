@@ -467,7 +467,7 @@
                                     class="item-img" alt="">
 
                                 <div class="item-html">
-                                    <h3>Special Offer</h3>
+                                    <h3>Белорусская мебельная мода в Обнинске!</h3>
 
                                     <h2>Excepteur sint occ aecat </h2>
 

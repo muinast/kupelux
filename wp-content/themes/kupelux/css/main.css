@@ -188,6 +188,12 @@ body#index #center_column.instant {
     margin-bottom: 31px
 }
 
+
+
+.pluso div[class^="pluso"] span.pluso-wrap {
+    padding: 0;
+}
+
 #page_wrapper_4 {
     background: url(http://livedemo00.template-help.com/prestashop_48520/themes/theme915/css/../img/bg-row.jpg) center top no-repeat #261f18;
     padding-top: 50px;
