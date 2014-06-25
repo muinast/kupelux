@@ -20,8 +20,109 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/font.css" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/highslide.css" type="text/css" media="all">
 
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.min.js"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/highslide.js"  type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+
+        hs.showCredits = 0;
+        hs.padToMinWidth = true;
+
+
+        //hs.align = 'center';
+        if (hs.registerOverlay) {
+            // The white controlbar overlay
+            hs.registerOverlay({
+                thumbnailId: 'thumb3',
+                overlayId: 'controlbar',
+                position: 'top right',
+                hideOnMouseOut: true
+            });
+            // The simple semitransparent close button overlay
+            hs.registerOverlay({
+                thumbnailId: 'thumb2',
+                html: '<div class="closebutton"	onclick="return hs.close(this)" title="Close"></div>',
+                position: 'top right',
+                fade: 2 // fading the semi-transparent overlay looks bad in IE
+            });
+        }
+
+        // ONLY FOR THIS EXAMPLE PAGE!
+        // Initialize wrapper for rounded-white. The default wrapper (drop-shadow)
+        // is initialized internally.
+        if (hs.addEventListener && hs.Outline) hs.addEventListener(window, 'load', function () {
+            new hs.Outline('rounded-white');
+            new hs.Outline('glossy-dark');
+        });
+
+        // The gallery example on the front page
+        var galleryOptions = {
+            slideshowGroup: 'gallery',
+            wrapperClassName: 'dark',
+            //outlineType: 'glossy-dark',
+            dimmingOpacity: 0.8,
+            align: 'center',
+            transitions: ['expand', 'crossfade'],
+            fadeInOut: true,
+            wrapperClassName: 'borderless floating-caption',
+            marginLeft: 100,
+            marginBottom: 80,
+            numberPosition: 'caption'
+        };
+
+        if (hs.addSlideshow) hs.addSlideshow({
+            slideshowGroup: 'gallery',
+            interval: 5000,
+            repeat: false,
+            useControls: true,
+            overlayOptions: {
+                className: 'text-controls',
+                position: 'bottom center',
+                relativeTo: 'viewport',
+                offsetY: -60
+            },
+            thumbstrip: {
+                position: 'bottom center',
+                mode: 'horizontal',
+                relativeTo: 'viewport'
+            }
+
+        });
+        hs.Expander.prototype.onInit = function() {
+            hs.marginBottom = (this.slideshowGroup == 'gallery') ? 150 : 15;
+        }
+
+        // focus the name field
+        hs.Expander.prototype.onAfterExpand = function() {
+
+            if (this.a.id == 'contactAnchor') {
+                var iframe = window.frames[this.iframe.name],
+                    doc = iframe.document;
+                if (doc.getElementById("theForm")) {
+                    doc.getElementById("theForm").elements["name"].focus();
+                }
+
+            }
+        }
+
+
+        // Not Highslide related
+        function frmPaypalSubmit(frm) {
+            if (frm.os0.value == '') {
+                alert ('Please enter your domain name');
+                return false;
+            }
+            return true;
+        }
+        //]]>
+    </script>
+    <script type="text/javascript">
+        // override Highslide settings here
+        // instead of editing the highslide.js file
+        hs.graphicsDir = '<?php bloginfo('stylesheet_directory'); ?>/css/graphics/';
+    </script>
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.slider.min.js"></script>
 </head>
 
@@ -32,7 +133,7 @@
 
 <header id="header" class="container">
 <div id="header_right">
-<a id="header_logo" href="#" title="KupeLux">
+<a id="header_logo" href="<?php echo home_url(); ?>" title="KupeLux">
     <h1><span>K</span>upe<span>L</span>ux</h1>
 </a>
 
@@ -52,13 +153,13 @@
     <div id="menu-trigger" style="display: none;">Categories<i class="menu-icon icon-plus-sign-alt"></i></div>
     <ul id="menu-custom">
         <li>
-            <a href="#">ГЛАВНАЯ</a>
+            <a href="<?php echo home_url(); ?>">ГЛАВНАЯ</a>
         </li>
         <li>
             <a href="#">ШКАФЫ-КУПЕ</a>
         </li>
         <li class="hasSub">
-            <a href="#">ФОТО-КАТАЛОГ</a>
+            <a href="<?php echo home_url(); ?>/photo-catalog">ФОТО-КАТАЛОГ</a>
             <ul>
                 <li>
                     <a href="#">ШКАФЫ-КУПЕ</a>
@@ -242,7 +343,7 @@
             </ul>
         </li>
         <li class="hasSub">
-            <a href="#">ИНФОРМАЦИЯ</a>
+            <a href="<?php echo home_url(); ?>/information">ИНФОРМАЦИЯ</a>
             <ul>
                 <li>
                     <a href="#">АКЦИИ, СКИДКИ, БОНУСЫ</a>
