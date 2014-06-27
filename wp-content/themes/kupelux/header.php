@@ -20,113 +20,35 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/font.css" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/responsive.css" type="text/css" media="all">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/highslide.css" type="text/css" media="all">
-
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/lightgallery.css" type="text/css" media="screen" rel="stylesheet">
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.min.js"></script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/highslide.js"  type="text/javascript"></script>
+
     <script type="text/javascript">
-        //<![CDATA[
-
-        hs.showCredits = 0;
-        hs.padToMinWidth = true;
-
-
-        //hs.align = 'center';
-        if (hs.registerOverlay) {
-            // The white controlbar overlay
-            hs.registerOverlay({
-                thumbnailId: 'thumb3',
-                overlayId: 'controlbar',
-                position: 'top right',
-                hideOnMouseOut: true
-            });
-            // The simple semitransparent close button overlay
-            hs.registerOverlay({
-                thumbnailId: 'thumb2',
-                html: '<div class="closebutton"	onclick="return hs.close(this)" title="Close"></div>',
-                position: 'top right',
-                fade: 2 // fading the semi-transparent overlay looks bad in IE
-            });
-        }
-
-        // ONLY FOR THIS EXAMPLE PAGE!
-        // Initialize wrapper for rounded-white. The default wrapper (drop-shadow)
-        // is initialized internally.
-        if (hs.addEventListener && hs.Outline) hs.addEventListener(window, 'load', function () {
-            new hs.Outline('rounded-white');
-            new hs.Outline('glossy-dark');
-        });
-
-        // The gallery example on the front page
-        var galleryOptions = {
-            slideshowGroup: 'gallery',
-            wrapperClassName: 'dark',
-            //outlineType: 'glossy-dark',
-            dimmingOpacity: 0.8,
-            align: 'center',
-            transitions: ['expand', 'crossfade'],
-            fadeInOut: true,
-            wrapperClassName: 'borderless floating-caption',
-            marginLeft: 100,
-            marginBottom: 80,
-            numberPosition: 'caption'
-        };
-
-        if (hs.addSlideshow) hs.addSlideshow({
-            slideshowGroup: 'gallery',
-            interval: 5000,
-            repeat: false,
-            useControls: true,
-            overlayOptions: {
-                className: 'text-controls',
-                position: 'bottom center',
-                relativeTo: 'viewport',
-                offsetY: -60
-            },
-            thumbstrip: {
-                position: 'bottom center',
-                mode: 'horizontal',
-                relativeTo: 'viewport'
-            }
-
-        });
-        hs.Expander.prototype.onInit = function() {
-            hs.marginBottom = (this.slideshowGroup == 'gallery') ? 150 : 15;
-        }
-
-        // focus the name field
-        hs.Expander.prototype.onAfterExpand = function() {
-
-            if (this.a.id == 'contactAnchor') {
-                var iframe = window.frames[this.iframe.name],
-                    doc = iframe.document;
-                if (doc.getElementById("theForm")) {
-                    doc.getElementById("theForm").elements["name"].focus();
-                }
-
-            }
-        }
-
-
-        // Not Highslide related
-        function frmPaypalSubmit(frm) {
-            if (frm.os0.value == '') {
-                alert ('Please enter your domain name');
+        $(document).ready(function () {
+            $('a[href="#"]').click(function () {
                 return false;
-            }
-            return true;
-        }
-        //]]>
+            });
+        });
     </script>
-    <script type="text/javascript">
-        // override Highslide settings here
-        // instead of editing the highslide.js file
-        hs.graphicsDir = '<?php bloginfo('stylesheet_directory'); ?>/css/graphics/';
-    </script>
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jssor.slider.min.js"></script>
+
 </head>
 
 <body id="index" class="index lang_ru">
+
+<div class="pluso_wrapper">
+    <script type="text/javascript">(function() {
+            if (window.pluso)if (typeof window.pluso.start == "function") return;
+            if (window.ifpluso==undefined) { window.ifpluso = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                var h=d[g]('body')[0];
+                h.appendChild(s);
+            }})();
+    </script>
+    <div class="pluso" data-background="transparent" data-options="big,square,line,vertical,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,evernote,email,print"></div>
+</div>
+
 <div id="page" class="clearfix">
 <div class="page_wrapper_1 clearfix">
 
@@ -156,30 +78,30 @@
             <a href="<?php echo home_url(); ?>">ГЛАВНАЯ</a>
         </li>
         <li>
-            <a href="#">ШКАФЫ-КУПЕ</a>
+            <a href="<?php echo home_url(); ?>/photo-catalog/wardrobes/">ШКАФЫ-КУПЕ</a>
         </li>
         <li class="hasSub">
             <a href="<?php echo home_url(); ?>/photo-catalog">ФОТО-КАТАЛОГ</a>
             <ul>
                 <li>
-                    <a href="#">ШКАФЫ-КУПЕ</a>
+                    <a href="<?php echo home_url(); ?>/photo-catalog/wardrobes/">ШКАФЫ-КУПЕ</a>
                 </li>
                 <li>
-                    <a href="#">ПРИХОЖИЕ</a>
+                    <a href="<?php echo home_url(); ?>/photo-catalog/room/">ПРИХОЖИЕ</a>
                 </li>
                 <li>
-                    <a href="#">КУХНИ</a>
+                    <a href="<?php echo home_url(); ?>/photo-catalog/kitchen/">КУХНИ</a>
                 </li>
                 <li>
-                    <a href="#">ГОРКИ</a>
+                    <a href="<?php echo home_url(); ?>/photo-catalog/hill/">ГОРКИ</a>
                 </li>
                 <li>
-                    <a href="#">ОФИСНАЯ МЕБЕЛЬ</a>
+                    <a href="<?php echo home_url(); ?>/photo-catalog/office/">ОФИСНАЯ МЕБЕЛЬ</a>
                 </li>
             </ul>
         </li>
         <li class="hasSub">
-            <a href="#">МАТЕРИАЛЫ</a>
+            <a href="<?php echo home_url(); ?>/materials/">МАТЕРИАЛЫ</a>
             <ul>
                 <li class="hasSub">
                     <a href="#">ДЛЯ ШКАФОВ-КУПЕ</a>
@@ -246,7 +168,7 @@
                             <a href="#">ЦВЕТА ДСП "EGGER"</a>
                         </li>
                         <li>
-                            <a href="#">ЦВЕТА ДВП ЛАМИНИРОВАННГО</a>
+                            <a href="#">ЦВЕТА ДВП ЛАМИНИР-ГО</a>
                         </li>
                         <li>
                             <a href="#">КРОМКА ПВХ "POLKEMIC"</a>

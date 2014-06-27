@@ -17,22 +17,22 @@
                 <h4 class="toggle">Информация<i class="icon-plus-sign"></i></h4>
                 <ul class="list-footer toggle_content clearfix">
                     <li class="first_item">
-                        <a href="#" title="Скидки">Акции и скидки</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Акции и скидки">Акции и скидки</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Вопрос-ответ</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Вопрос-ответ">Вопрос-ответ</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Отзывы о нас</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Отзывы о нас">Отзывы о нас</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Процесс заказа</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Процесс заказа">Процесс заказа</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Установка и гарантия</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Установка и гарантия">Установка и гарантия</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Справочник терминов</a>
+                        <a href="<?php echo home_url(); ?>/information/" title="Справочник терминов">Справочник терминов</a>
                     </li>
                 </ul>
             </section>
@@ -41,19 +41,19 @@
                 <h4 class="toggle">Категории<i class="icon-plus-sign"></i></h4>
                 <ul class="list-footer toggle_content clearfix">
                     <li class="first_item">
-                        <a href="#" title="Скидки">Шкафы-купе</a>
+                        <a href="<?php echo home_url(); ?>/photo-catalog/wardrobes/" title="Шкафы-купе">Шкафы-купе</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Прихожие</a>
+                        <a href="<?php echo home_url(); ?>/photo-catalog/room/" title="Прихожие">Прихожие</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Кухни</a>
+                        <a href="<?php echo home_url(); ?>/photo-catalog/kitchen/" title="Кухни">Кухни</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Горки</a>
+                        <a href="<?php echo home_url(); ?>/photo-catalog/hill/" title="Горки">Горки</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Офисная мебель</a>
+                        <a href="<?php echo home_url(); ?>/photo-catalog/office/" title="Офисная мебель">Офисная мебель</a>
                     </li>
                 </ul>
             </section>
@@ -62,22 +62,22 @@
                 <h4 class="toggle">Материалы<i class="icon-plus-sign"></i></h4>
                 <ul class="list-footer toggle_content clearfix">
                     <li class="first_item">
-                        <a href="#" title="Скидки">Для шкафов-купе</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Для шкафов-купе">Для шкафов-купе</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Для кухни</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Для кухни">Для кухни</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Основные</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Основные">Основные</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Изображения</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Изображения">Изображения</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Фасады</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Фасады">Фасады</a>
                     </li>
                     <li class="first_item">
-                        <a href="#" title="Скидки">Фурнитура</a>
+                        <a href="<?php echo home_url(); ?>/materials/" title="Фурнитура">Фурнитура</a>
                     </li>
                 </ul>
             </section>
@@ -85,7 +85,7 @@
             <section class="block blocksocial col-sm-2">
                 <h4>Мы в соцсетях<i class="icon-plus-sign"></i></h4>
                 <ul class="list-footer toggle_content">
-                    <li class="facebook"><a href="http://facebook.com/">ВКонтакте</a></li>
+                    <li class="facebook"><a href="http://vk.com/">ВКонтакте</a></li>
                     <li class="facebook"><a href="http://facebook.com/">Facebook</a></li>
                     <li class="twitter"><a href="http://twitter.com/">Twitter</a></li>
                 </ul>
@@ -94,9 +94,8 @@
             <section class="block blockcontactinfos col-sm-4">
                 <h4>Свяжитесь с нами<i class="icon-plus-sign"></i></h4>
                 <ul class="toggle_content">
-                    <li class="contact-tel">VEL: (029) 658-60-10</li>
-                    <li class="contact-tel">MTC: (029) 708-60-10</li>
-                    <li>Email: <a href="mailto:info@kupelux.by">info@kupelux.by</a></li>
+                    <li class="contact-tel">VEL: (029) 658-60-10 <span style="padding-left: 43px;">Skype: kupelux.by</span></li>
+                    <li class="contact-tel">MTC: (029) 708-60-10 <span style="padding-left: 40px;">Email: <a href="mailto:info@kupelux.by">info@kupelux.by</a></span></li>
                     <br>
                     <li>© 2014 ИП Шумихин А.Н. (УНП: 191045665)</li>
                 </ul>

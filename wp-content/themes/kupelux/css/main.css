@@ -29,6 +29,8 @@ img {
     max-width: 100%
 }
 
+
+
 body {
     font: normal normal 13px/18px "Roboto", sans-serif;
     color: #35312b;
@@ -185,13 +187,16 @@ body#index #center_column.instant {
 
 .page_wrapper_3 {
     border-top: 1px solid #d0d0d0;
-    margin-bottom: 31px
+    margin-bottom: 0px;
 }
 
 
 
-.pluso div[class^="pluso"] span.pluso-wrap {
-    padding: 0;
+.pluso_wrapper{
+    position: fixed;
+    left: 1px;
+    top: 30%;
+    z-index: 100;
 }
 
 #page_wrapper_4 {
@@ -490,6 +495,37 @@ input.button_mini, input.button_small, input.button, input.button_large, input.b
     text-align: left;
     background: #87c161;
     text-shadow: 1px 1px 1px #68944b
+}
+
+#materials-sidebar .lnk {
+    background: #87c161;
+    font: bold 17px/21px "Roboto", sans-serif;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#materials-sidebar .lnk span {
+    color: #000000;
+}
+
+#materials-sidebar .lnk a {
+    font: bold 14px/17px "Roboto", sans-serif;
+    color: #fff;
+    padding-left: 15px;
+    padding-top: 4px;
+}
+
+#materials-sidebar .lnk a:hover {
+    color: #87c161;
+}
+
+#materials-sidebar .lnk:hover{
+    background: #35312b;
+}
+
+#materials-sidebar .lnk:hover span {
+    color: #87c161;
 }
 
 input.button_mini:focus, input.button_small:focus, input.button:focus, input.button_large:focus, input.button_mini_disabled:focus, input.button_small_disabled:focus, input.button_disabled:focus, input.button_large_disabled:focus, input.exclusive_mini:focus, input.exclusive_small:focus, input.exclusive:focus, input.exclusive_large:focus, input.exclusive_mini_disabled:focus, input.exclusive_small_disabled:focus, input.exclusive_disabled:focus, input.exclusive_large_disabled:focus, a.button_mini:focus, a.button_small:focus, a.button:focus, a.button_large:focus, a.exclusive_mini:focus, a.exclusive_small:focus, a.exclusive:focus, a.exclusive_large:focus, span.button_mini:focus, span.button_small:focus, span.button:focus, span.button_large:focus, span.exclusive_mini:focus, span.exclusive_small:focus, span.exclusive:focus, span.exclusive_large:focus {
@@ -1873,6 +1909,23 @@ h1#instant_search_results a:hover {
 
 #product_list .warning {
     margin-top: 13px
+}
+
+#product_list img {
+    max-width: 175%;
+}
+
+#product_list table li{
+    float: left;
+    width: 280px;
+}
+
+#product_list table li img{
+    max-width: 280px;
+}
+
+#product_list table td{
+    vertical-align: top;
 }
 
 .layered_price ul {
@@ -4723,7 +4776,9 @@ div.checker input {
 
 #product_list .inner_content {
     position: relative;
-    margin-bottom: 0
+    margin-bottom: 0;
+    max-height: 300px;
+    overflow: hidden;
 }
 
 #product_list .product_flags {
