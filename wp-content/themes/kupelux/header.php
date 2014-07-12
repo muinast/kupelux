@@ -16,10 +16,13 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
 
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css" type="text/css" media="all">
+    <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/font.css" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.css" type="text/css" media="all">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css" type="text/css" media="all">
+
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/lightgallery.css" type="text/css" media="screen" rel="stylesheet">
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.min.js"></script>
 
@@ -46,7 +49,7 @@
                 h.appendChild(s);
             }})();
     </script>
-    <div class="pluso" data-background="transparent" data-options="big,square,line,vertical,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,evernote,email,print"></div>
+    <div class="pluso" data-background="transparent" data-options="big,square,line,vertical,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,evernote,email,print" data-user="1727841079"></div>
 </div>
 
 <div id="page" class="clearfix">
@@ -55,20 +58,20 @@
 
 <header id="header" class="container">
 <div id="header_right">
+
 <a id="header_logo" href="<?php echo home_url(); ?>" title="KupeLux">
     <h1><span>K</span>upe<span>L</span>ux</h1>
 </a>
 
-<section id="header_user" class="blockuserinfo-cart header-box">
-    <div id="shopping_cart">
-        <a href="#">
-            <i class="opancart icon-caret-down"></i>
-            <span class="shopping_cart_title"></span>
-            <span class="ajax_cart_quantity" style="display: none;">0</span>
-
-            <span class="ajax_cart_no_product">(пусто)</span>
-        </a>
+<section id="header_contacts" class="header-box">
+    <div class="header_contacts">
+        <h4>Звоните нам прямо сейчас!</h4>
+        <ul class="toggle_content">
+            <li class="contact-tel">MTC: (029) 708-60-10<span style="padding-left: 38px;">Skype: kupelux.by</span></li>
+            <li class="contact-tel">VEL: (029) 658-60-10<span style="padding-left: 40px;">E-mail: <a href="mailto:info@kupelux.by">info@kupelux.by</a></span></li>
+        </ul>
     </div>
+    <style>.jivo-btn {   -webkit-box-sizing: border-box;   -moz-box-sizing: border-box;   box-sizing: border-box;   margin: 0;   text-transform: none;   cursor: pointer;   background-image: none;   display: inline-block;   padding: 6px 12px;   margin-bottom: 0;   font-size: 14px;   font-weight: normal;   line-height: 1.428571429;   text-align: center;   vertical-align: middle;   cursor: pointer;   border: 0px;   border-radius: 4px;   white-space: nowrap;   -webkit-user-select: none;   -moz-user-select: none;   -ms-user-select: none;   -o-user-select: none;   user-select: none;}.jivo-btn:hover {   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.2), inset 0 0 20px 10px rgba(255,255,255,0.3);   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.2), inset 0 0 20px 10px rgba(255,255,255,0.3);   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.2), inset 0 0 20px 10px rgba(255,255,255,0.3);}.jivo-btn.jivo-btn-light:hover{   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.3), inset 0 0 20px 10px rgba(255,255,255,0.1);   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.3), inset 0 0 20px 10px rgba(255,255,255,0.1);   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.3), inset 0 0 20px 10px rgba(255,255,255,0.1);}.jivo-btn.jivo-btn-light{   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 1px rgba(0,0,0,0.3);   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 1px rgba(0,0,0,0.3);   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 1px rgba(0,0,0,0.3);}.jivo-btn:active,.jivo-btn.jivo-btn-light:active{   box-shadow: 0 1px 0px rgba(255,255,255,0.4), inset 0 0 15px rgba(0,0,0,0.2);   -moz-box-shadow: 0 1px 0px rgba(255,255,255,0.4), inset 0 0 15px rgba(0,0,0,0.2);   -webkit-box-shadow: 0 1px 0px rgba(255,255,255,0.4), inset 0 0 15px rgba(0,0,0,0.2);   cursor: pointer;}.jivo-btn:active {   outline: 0;   background-image: none;   -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);   box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);}.jivo-btn-gradient {   background-image: url(//static.jivosite.com/button/white_grad_light.png);   background-repeat: repeat-x;}.jivo-btn-light.jivo-btn-gradient {   background-image: url(//static.jivosite.com/button/white_grad.png);}.jivo-btn-icon {   width:17px;   height: 20px;   background-repeat: no-repeat;   display: inline-block;   vertical-align: middle;   margin-right: 10px;   margin-left: -5px;}.jivo-btn-light {   color: #fff;}..jivo-btn-dark {   color: #222;}</style><!--[if lte IE 7]><style type="text/css">.jivo-btn, .jivo-btn-icon  {   display: inline;}</style><![endif]--><div class="jivo-btn jivo-online-btn jivo-btn-light jivo-btn-gradient" onclick="jivo_api.open();" style="font-family: Arial, Arial;font-size: 17px;background-color: #059d50;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;height: 32px;line-height: 32px;padding: 0 16px 0 16px;font-weight: normal;font-style: normal"><div class="jivo-btn-icon" style="background-image: url(//static.jivosite.com/button/chat_light.png);"></div>Напишите нам, мы в онлайне!</div><div class="jivo-btn jivo-offline-btn jivo-btn-light jivo-btn-gradient" onclick="jivo_api.open();" style="font-family: Arial, Arial;font-size: 17px;background-color: #059d50;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;height: 32px;line-height: 32px;padding: 0 16px 0 16px;display: none;font-weight: normal;font-style: normal"><div class="jivo-btn-icon" style="background-image: url(//static.jivosite.com/button/mail_light.png);"></div>Оставьте сообщение!</div>
 </section>
 
 <div id="menu-wrap" class="clearfix desktop">
@@ -291,7 +294,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">НОВОСТИ</a>
+            <a href="#">СТАТЬИ</a>
         </li>
         <li>
             <a href="#">КОНТАКТЫ</a>

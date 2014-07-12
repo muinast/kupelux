@@ -16,7 +16,7 @@
 <div id="right_column" class="col-xs-12 col-sm-3 column">
 
     <section id="layered_block_left" class="column_box block">
-        <h3 class="toggle"><span>ФОТО-КАТАЛОГ</span></h3>
+        <h3 class="toggle"><span>Фото-каталог</span></h3>
 
         <div class="block_content">
             <div class="lnk" style="width: 270px; margin-bottom: 1px;">

@@ -21,24 +21,24 @@
 <?php get_template_part('widget', 'sidebar-info'); ?>
 
 <!-- Center -->
-<div id="center_column" class="center_column col-xs-12 col-sm-9 clearfix" style="padding-top: 55px; padding-left: 30px;">
+<div id="center_column" class="center_column col-xs-12 col-sm-9 clearfix posts" style="padding-top: 55px; padding-left: 30px; padding-right: 30px;">
 
 
 
-        <?php $loop = new WP_Query( array( 'cat' => '4', 'orderby' => 'title') );
-        $count = 1;
+        <?php $loop = new WP_Query( array( 'cat' => '4', 'orderby' => 'title', 'order' => 'ASC') );
+        $count = 0;
         $total = $loop->found_posts;
 
         while ( $loop->have_posts() ) : $loop->the_post();
             $count++;
             ?>
-    <ul class="row grid" style="opacity: 1; <?php if ($count !== $total) {?>border-bottom: 1px solid gainsboro;<?php } ?>">
+    <ul class="row grid" style="opacity: 1; <?php if ($count < $total) { echo("border-bottom: 1px solid gainsboro;") ; ?><?php } ?>">
         <h5>
             <a class="product_link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
         </h5>
         <p style="margin-top: 5px;">
             <?php the_excerpt(); ?>
-            <a class="lnk_more_cat" style="float: right"><i class="icon-plus-sign"></i> Подробнее</a>
+            <a href="<?php the_permalink(); ?>" class="lnk_more_cat" style="float: right;"><i class="icon-plus-sign"></i> Подробнее</a>
         </p>
     </ul>
         <?php endwhile;  ?>
