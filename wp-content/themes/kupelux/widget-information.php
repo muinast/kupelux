@@ -43,6 +43,20 @@
     </ul>
         <?php endwhile;  ?>
 
+    <?php while ( $loop->have_posts() ) : $loop->the_post();
+    $count++;
+    ?>
+    <ul class="row grid" style="opacity: 1; <?php if ($count < $total) { echo("border-bottom: 1px solid gainsboro;") ; ?><?php } ?>">
+        <h5>
+            <a class="product_link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+        </h5>
+        <p style="margin-top: 5px;">
+            <?php the_excerpt(); ?>
+            <a href="<?php the_permalink(); ?>" class="lnk_more_cat" style="float: right;"><i class="icon-plus-sign"></i> Подробнее</a>
+        </p>
+    </ul>
+    <?php endwhile;  ?>
+
 
 
 </div>

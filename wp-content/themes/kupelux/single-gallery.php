@@ -15,7 +15,12 @@ get_header(); ?>
         <div class="row">
 
             <!-- Left -->
-            <?php get_template_part('sidebar', 'info'); ?>
+            <?php get_template_part('sidebar', 'gallery'); ?>
+
+            <script src="<?php bloginfo('stylesheet_directory'); ?>/js/lightgallery.min.js"  type="text/javascript"></script>
+            <script>
+                lightgallery.init();
+            </script>
 
             <!-- Center -->
             <div id="center_column" class="center_column col-xs-12 col-sm-9 clearfix" style="padding-bottom: 20px;">

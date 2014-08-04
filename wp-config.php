@@ -16,12 +16,15 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
+//define('DB_NAME', 'kupeluxb_wp');
 define('DB_NAME', 'kupelux');
 
 /** Имя пользователя MySQL */
 define('DB_USER', 'root');
+//define('DB_USER', 'kupeluxb_wpu');
 
 /** Пароль к базе данных MySQL */
+//define('DB_PASSWORD', 'd86u6fs9rA');
 define('DB_PASSWORD', '');
 
 /** Имя сервера MySQL */
